@@ -124,3 +124,20 @@ Promise.all([promise1, promise2, promise3])
     -addEventListener - (event , callback function)
 ## closure -
    -child function can access variables of  parent lixical environment called "closure".
+## function consructor
+  - A function constructor is a way to create a object using function as a blue print or template.
+  - it allow you to define a reusable structure for creating multiple objects with similar properties and method. 
+## call() , Apply() , Bind() -
+These three are methods are used to invoke a function where we are supposed to pass an object as first argument and at the time of definition we dont have mention this object as a parameter and we can access the values of objects by using this keyword in function definition.
+- Call() :
+ - The call method is used to invoke a function with specific "this" value & argumnets provide individually.
+ - The call() method invokes a function in which first arguments will be the object and the rest will be as an individual arguments.
+- Apply() :
+  - It is similar to the call() method but it takes arguments as an array
+  - The Apply() method invokes a function in which first arguments will be the object and the rest will be as an array.
+- Bind() :
+  - It is a function that helps you create another function that you can execute later with the new context of this is provided.
+
+## async/await:
+The async/await keywords are used in JavaScript to handle asynchronous operations in a more synchronous and readable manner. They provide a way to write asynchronous code that looks and behaves more like synchronous code, making it easier to understand and maintain.
+## prototype :
