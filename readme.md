@@ -141,3 +141,6 @@ These three are methods are used to invoke a function where we are supposed to p
 ## async/await:
 The async/await keywords are used in JavaScript to handle asynchronous operations in a more synchronous and readable manner. They provide a way to write asynchronous code that looks and behaves more like synchronous code, making it easier to understand and maintain.
 ## prototype :
+The prototype is an object that is associated with every functions and objects by default in JavaScript
+## prototype chaining :
+Every object in JavaScript has a built-in property, which is called its prototype. The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain. 
