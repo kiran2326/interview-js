@@ -76,3 +76,51 @@
 1. undefine - variable dec. but not init.
 2. not define - variable is not declear.
 3. NaN - Not a Number
+
+# day 3 - 20th june 2023
+   -Promise are used to handle async operations in JS. easy ti handle callback hell
+   -These are used to handle the errors
+   -basically in promise there are three stages
+    1. pending
+    2. resolve - (.then method)
+    3. reject - (.catch method)
+   - initial stage of any promise is always pending. 
+    
+    for example:
+    const promise1 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 1000, 'Promise 1');
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 2000, 'Promise 2');
+});
+
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(reject, 1500, 'Promise 3 Error');
+});
+
+Promise.all([promise1, promise2, promise3])
+  .then(values => {
+    console.log('All promises resolved:', values);
+  })
+  .catch(error => {
+    console.log('Error occurred:', error);
+  });
+## What is promise chaining?
+ - its a technique to chain multiple asynchronus operation together using promises.
+ - Promise chaining is a technique in JavaScript to execute multiple asynchronous operations in a specific order by chaining promises together using the .then method
+ - Multiple .then method.
+
+ ## DOM - Document Object Model
+  -Document Object Model . basically it is javascript mechanism by which we can change the document structure , style ,and content.
+  -Different methods in Dom
+    -Id - getElementBYId - return unique value
+    -query selector- return unique value
+    -class - getElementBYClassName
+    -tag Name - getElementsByTagName
+
+    -querySelectorAll
+
+    -addEventListener - (event , callback function)
+## closure -
+   -child function can access variables of  parent lixical environment called "closure".

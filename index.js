@@ -11,7 +11,7 @@ let b = function add(){
     console.log("hi");
     return "hello"
 }
-console.log(b);
+console.log(b());
 // Q6:pure function
 function add(c,d){
     return c + d;
@@ -54,13 +54,49 @@ setTimeout(()=>{
 display();
 // 
 function greet(name,func){
-    console.log('hi ${name}');
-    setTimeout(()=>{
-        func();
-    },2000)
+    console.log('hi$'{name});
+    // setTimeout(()=>{
+    //     func();
+    // },2000)
+    console.log(func());
   
 }
 function sum(){
     console.log("hey...");
 }
 greet('ea23',sum)
+
+// 
+const varPromise = new Promise((resolve, reject)=>{
+   if(true){
+    resolve("this is new Promise one")
+   }   
+   else{
+    reject("promise rejected")
+   }
+})
+function funcPromise(){
+    return new Promise((res,rej)=>{
+        res("resolve")
+    })
+}
+Promise.all([varPromise,funcPromise()])
+    .then((item) =>console.log(...item))
+    .catch((err) => console.log(...err))
+
+// 
+function sai(Num,timeout){
+    return new Promise((res,rej)=>{
+        setTimeout(()=>{
+            console.log(Num);
+            res('resolved..')
+        },timeout)
+    })
+}
+sai(1,1000)
+.then(()=> sai(2,6000))
+.then(()=> sai(3,5000))
+.then(()=> sai(4,4000))
+.then(()=> sai(5,3000))
+.then(()=> sai(6,2000))
+.then((data)=> console.log('completed'))
